@@ -1,0 +1,39 @@
+/*
+ *************************************************************************
+ *
+ * Projeto: Algoritmo Bubble Sort
+ *
+ * Função: Ordena uma array de números 
+ * Código fonte do projeto disponível em https://github.com/fraterblack/projeto-analise-de-algoritmo
+ *************************************************************************
+ *
+ * Autor: Eduardo Elias Américo da Silveira
+ * 		  Edvaldo da Rosa
+ * 		  Gilberto Topanotti
+ *
+ * Alteração: 
+ * Data: 15/09/2018
+ *************************************************************************
+ *
+ *
+ * Copyright 2018
+ *
+ *************************************************************************
+ */
+ 
+public int[] sort(int[] array) {
+	int arraySize = array.length;
+	
+	//Algorithm Bubble Sort
+	for (int i = 0; i < arraySize - 1; i++) {
+		for (int j = i + 1; j < arraySize; j++){
+            if (array[j] < array[i]){
+                int aux = array[i];
+                array[i] = array[j];
+                array[j] = aux;
+            }
+        }
+	}
+	
+	return array;
+}

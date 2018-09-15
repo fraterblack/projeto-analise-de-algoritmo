@@ -6,4 +6,6 @@ public abstract class AbstractSort {
 	public ExecutionTimer timer() {
 		return timer;
 	}
+	
+	public abstract int[] sort(int[] array);
 }
