@@ -1,0 +1,9 @@
+/.metadata
+/.settings
+/.recommenders
+/bin
+.classpath
+.project
+src/br/com/sistemaescolar/data/cidades.txt
+src/br/com/sistemaescolar/data/alunos.txt
+src/br/com/sistemaescolar/data/usuarios.txt
