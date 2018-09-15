@@ -2,6 +2,7 @@
 Repositórios dos algoritmos solicitados em sala de aula para a equipe.
 ## Algoritmos
 [Insertion Sort](https://github.com/fraterblack/projeto-analise-de-algoritmo/tree/master/src/com/analise/insertionSort)
+
 [Bubble Sort](https://github.com/fraterblack/projeto-analise-de-algoritmo/tree/master/src/com/analise/bubbleSort)
 
 ## Cabeçalho
