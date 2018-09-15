@@ -21,7 +21,7 @@
  *************************************************************************
  */
  
-InsertionSortApplication app = new InsertionSortApplication();
+InsertionSort app = new InsertionSort();
 		
 //Pega o tamanho do array
 int arraySize = app.getArraySize();
@@ -30,8 +30,11 @@ int arraySize = app.getArraySize();
 ArrayGenerator arrayGenerator = new ArrayGenerator();	
 int[] array = arrayGenerator.createArray(arraySize);
 
+//Imprime array antes da ordenação
+//app.printArray(array);
+
 //Start time
-app.startTime();
+app.timer().startTime();
 
 //Algoritmo Insertion Sort
 for (int i = 1; i < arraySize; i++) {
@@ -47,8 +50,8 @@ for (int i = 1; i < arraySize; i++) {
 }
 
 //Finish and show execution time
-app.finishTime();
-app.printElapsedTime();
+app.timer().finishTime();
+app.timer().printElapsedTime();
 
 //Imprime resultado da ordenação
-app.print/Array(array);
+app.printArray(array);

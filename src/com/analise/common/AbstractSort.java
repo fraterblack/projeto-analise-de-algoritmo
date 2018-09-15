@@ -2,7 +2,8 @@ package com.analise.common;
 
 import java.util.Scanner;
 
-public class AbstractSortApplication extends AbstractApplication {
+public abstract class AbstractSort {
+	ExecutionTimer timer = new ExecutionTimer();
 	Scanner in = new Scanner(System.in);
 	
 	public int getArraySize() {
@@ -19,5 +20,9 @@ public class AbstractSortApplication extends AbstractApplication {
 		}
 		
 		System.out.println("----------- fim ----------");
+	}
+	
+	public ExecutionTimer timer() {
+		return timer;
 	}
 }

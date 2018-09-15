@@ -1,6 +1,6 @@
 package com.analise.common;
 
-public class AbstractApplication {
+public final class ExecutionTimer {
 	long startTime = 0;
 	long finishTime = 0;
 	
