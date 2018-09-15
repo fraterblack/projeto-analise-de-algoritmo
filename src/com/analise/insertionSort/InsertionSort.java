@@ -1,7 +1,7 @@
 package com.analise.insertionSort;
 
 import com.analise.common.AbstractSort;
-import com.analise.common.ArrayGenerator;
+import com.analise.common.ArrayHelper;
 
 public class InsertionSort extends AbstractSort {
 	
@@ -27,15 +27,16 @@ public class InsertionSort extends AbstractSort {
 	public static void main(String[] args) {
 		InsertionSort insertionSort = new InsertionSort();
 		
+		ArrayHelper arrayHelper = new ArrayHelper();
+		
 		//Pega o tamanho do array
-		int arraySize = insertionSort.getArraySize();
+		int arraySize = arrayHelper.getArraySize();
 		
 		//Gera o array
-		ArrayGenerator arrayGenerator = new ArrayGenerator();	
-		int[] array = arrayGenerator.createArray(arraySize);
+		int[] array = arrayHelper.createArray(arraySize);
 		
 		//Imprime array antes da ordenação
-		//insertionSort.printArray(array);
+		//arrayHelper.printArray(array);
 		
 		//Start time
 		insertionSort.timer().startTime();
@@ -46,11 +47,11 @@ public class InsertionSort extends AbstractSort {
 		//Finish time
 		insertionSort.timer().finishTime();
 		
+		//Imprime resultado da ordenação
+		arrayHelper.printArray(array);
+		
 		//Imprime tempo de execução
 		insertionSort.timer().printElapsedTime();
-
-		//Imprime resultado da ordenação
-		//insertionSort.printArray(array);
 	}
 
 }

@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class ArrayGenerator {
+public class ArrayHelper {
 	Scanner in = new Scanner(System.in);
 	
 	public int[] createArray(int length) {
@@ -38,7 +38,7 @@ public class ArrayGenerator {
 	public int[] createDescSortedArray(int length) {
 		int[] array = new int[length];
 		
-		for(int i = 0, j = length; i < length; i++, j--) {
+		for(int i = 0, j = length - 1; i < length; i++, j--) {
 			array[i] = j;
 		}
 		
@@ -48,13 +48,29 @@ public class ArrayGenerator {
 	public int[] createUnsortedArray(int length) {
 		int[] array = new int[length];
 		
-		for(int i = 0, j = length; i < length; i++, j--) {
-			array[i] = j;
+		for(int i = 0; i < length; i++) {
+			array[i] = i;
 		}
 		
 		shuffleArray(array);
 		
 		return array;
+	}
+	
+	public int getArraySize() {
+		System.out.print("Informe o tamanho do array: ");
+		
+		return Integer.parseInt(in.nextLine());
+	}
+	
+	public void printArray(int[] array) {
+		System.out.println("--------- início ---------");
+		
+		for(int i = 0; i < array.length; i++) {
+			System.out.println(array[i]);
+		}
+		
+		System.out.println("----------- fim ----------");
 	}
 	
 	//Implementing Fisher–Yates shuffle
