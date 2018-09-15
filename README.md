@@ -5,6 +5,8 @@ Repositórios dos algoritmos solicitados em sala de aula para a equipe.
 
 [Bubble Sort](https://github.com/fraterblack/projeto-analise-de-algoritmo/tree/master/src/com/analise/bubbleSort)
 
+[Merge Sort](https://github.com/fraterblack/projeto-analise-de-algoritmo/tree/master/src/com/analise/mergeSort)
+
 ## Cabeçalho
 ```
 /*
