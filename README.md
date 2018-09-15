@@ -8,7 +8,7 @@ Repositórios dos algoritmos solicitados em sala de aula
  * Projeto: 
  *
  * Função: 
- * Código do projeto disponível em https://github.com/fraterblack/projeto-analise-de-algoritmo
+ * Código fonte do projeto disponível em https://github.com/fraterblack/projeto-analise-de-algoritmo
  *************************************************************************
  *
  * Autor: Eduardo Elias Américo da Silveira

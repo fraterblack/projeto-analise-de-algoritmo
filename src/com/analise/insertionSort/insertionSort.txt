@@ -1,0 +1,54 @@
+/*
+ *************************************************************************
+ *
+ * Projeto: Algoritmo Insertion Sort
+ *
+ * Função: Ordena uma array de números 
+ * Código fonte do projeto disponível em https://github.com/fraterblack/projeto-analise-de-algoritmo
+ *************************************************************************
+ *
+ * Autor: Eduardo Elias Américo da Silveira
+ * 		  Edvaldo da Rosa
+ * 		  Gilberto Topanotti
+ *
+ * Alteração: 
+ * Data: 23/08/2018
+ *************************************************************************
+ *
+ *
+ * Copyright 2018
+ *
+ *************************************************************************
+ */
+ 
+InsertionSortApplication app = new InsertionSortApplication();
+		
+//Pega o tamanho do array
+int arraySize = app.getArraySize();
+
+//Gera o array
+ArrayGenerator arrayGenerator = new ArrayGenerator();	
+int[] array = arrayGenerator.createArray(arraySize);
+
+//Start time
+app.startTime();
+
+//Algoritmo Insertion Sort
+for (int i = 1; i < arraySize; i++) {
+	int aux = array[i];
+	int j = i;
+	
+	while ((j > 0) && (array[j - 1] > aux)) {
+		array[j] = array[j - 1];
+		j--;
+	}
+	
+	array[j] = aux; 
+}
+
+//Finish and show execution time
+app.finishTime();
+app.printElapsedTime();
+
+//Imprime resultado da ordenação
+app.print/Array(array);
