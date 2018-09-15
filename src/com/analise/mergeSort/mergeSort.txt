@@ -1,0 +1,64 @@
+/*
+ *************************************************************************
+ *
+ * Projeto: Algoritmo Merge Sort
+ *
+ * Função: Ordena uma array de números 
+ * Código fonte do projeto disponível em https://github.com/fraterblack/projeto-analise-de-algoritmo
+ *************************************************************************
+ *
+ * Autor: Eduardo Elias Américo da Silveira
+ * 		  Edvaldo da Rosa
+ * 		  Gilberto Topanotti
+ *
+ * Alteração: 
+ * Data: 30/08/2018
+ *************************************************************************
+ *
+ *
+ * Copyright 2018
+ *
+ *************************************************************************
+ */
+ 
+public int[] sort(int[] array) {
+	int[] auxArray = new int[array.length];
+	
+    sort(array, 0, array.length, auxArray);
+    
+    return array;
+}
+
+private int[] sort(int[] array, int startIndex, int finalIndex, int[] auxArray) {
+	if ((finalIndex - startIndex) < 2) {
+		return null;
+	}
+    
+    int middleIndex = (startIndex + finalIndex) / 2;
+    
+    sort(array, startIndex, middleIndex, auxArray);
+    sort(array, middleIndex, finalIndex, auxArray);
+    
+    return merge(array, startIndex, middleIndex, finalIndex, auxArray);
+}
+
+private int[] merge(int[] array, int startIndex, int middleIndex, int finalIndex, int[] auxArray) {
+	int leftIndex = startIndex;
+    int rightIndex = middleIndex;
+    for (int i = startIndex; i < finalIndex; ++i) {
+        if ((leftIndex < middleIndex) && ((rightIndex >= finalIndex) || (array[leftIndex] < array[rightIndex]))) {
+            auxArray[i] = array[leftIndex];
+            ++leftIndex;
+        } else {
+            auxArray[i] = array[rightIndex];
+            ++rightIndex;
+        }
+    }
+    
+    //Recria o array original com o conteúdo do array auxiliar
+    for (int i = startIndex; i < finalIndex; ++i) {
+    	array[i] = auxArray[i];
+    }
+    
+    return array;
+}
