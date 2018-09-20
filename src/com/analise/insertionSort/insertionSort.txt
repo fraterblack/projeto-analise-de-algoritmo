@@ -4,7 +4,7 @@
  * Projeto: Algoritmo Insertion Sort
  *
  * Função: Ordena uma array de números 
- * Código fonte do projeto disponível em https://github.com/fraterblack/projeto-analise-de-algoritmo
+ * Código fonte completo do projeto disponível em https://github.com/fraterblack/projeto-analise-de-algoritmo
  *************************************************************************
  *
  * Autor: Eduardo Elias Américo da Silveira
@@ -24,6 +24,9 @@
 public int[] sort(int[] array) {
 	int arraySize = array.length;
 	
+	//Start time
+	timer().startTime();
+
 	//Algorithm Insertion Sort
 	for (int i = 1; i < arraySize; i++) {
 		int aux = array[i];
@@ -36,6 +39,9 @@ public int[] sort(int[] array) {
 		
 		array[j] = aux; 
 	}
+	
+	//Finish time
+	timer().finishTime();
 	
 	return array;
 }

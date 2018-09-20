@@ -4,7 +4,7 @@
  * Projeto: Algoritmo Merge Sort
  *
  * Função: Ordena uma array de números 
- * Código fonte do projeto disponível em https://github.com/fraterblack/projeto-analise-de-algoritmo
+ * Código fonte completo do projeto disponível em https://github.com/fraterblack/projeto-analise-de-algoritmo
  *************************************************************************
  *
  * Autor: Eduardo Elias Américo da Silveira
@@ -24,7 +24,13 @@
 public int[] sort(int[] array) {
 	int[] auxArray = new int[array.length];
 	
+	//Start time
+	timer().startTime();
+			
     sort(array, 0, array.length, auxArray);
+    
+    //Finish timer
+  	timer().finishTime();
     
     return array;
 }

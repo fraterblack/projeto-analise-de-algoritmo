@@ -1,15 +1,20 @@
 package com.analise.mergeSort;
 
-import com.analise.mergeSort.MergeSort;
 import com.analise.common.AbstractSort;
-import com.analise.common.ArrayHelper;
+import com.analise.common.GenericExecuteSort;
 
 public class MergeSort extends AbstractSort {
 
 	public int[] sort(int[] array) {
 		int[] auxArray = new int[array.length];
 		
+		//Start time
+		timer().startTime();
+				
 	    sort(array, 0, array.length, auxArray);
+	    
+	    //Finish timer
+	  	timer().finishTime();
 	    
 	    return array;
 	}
@@ -49,29 +54,7 @@ public class MergeSort extends AbstractSort {
 	}
 
 	public static void main(String[] args) {
-		MergeSort mergeSort = new MergeSort();
-	
-		ArrayHelper arrayHelper = new ArrayHelper();
-		
-		//Pega o tamanho do array
-		int arraySize = arrayHelper.getArraySize();
-		
-		//Gera o array
-		int[] array = arrayHelper.createArray(arraySize);
-		
-		//Start time
-		mergeSort.timer().startTime();
-		
-		//Aciona a função de ordenação
-		array = mergeSort.sort(array);
-		
-		//FstartIndexsh time
-		mergeSort.timer().finishTime();
-		
-		//Imprime resultado da ordenação
-		arrayHelper.printArray(array);
-		
-		//Imprime tempo de execução
-		mergeSort.timer().printElapsedTime();
+		GenericExecuteSort<MergeSort> mergeSort = new GenericExecuteSort<MergeSort>(MergeSort.class);
+		mergeSort.execute();
 	}
 }

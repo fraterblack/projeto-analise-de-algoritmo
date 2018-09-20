@@ -10,7 +10,11 @@ public class ArrayHelper {
 	public int[] createArray(int length) {
 		String option;
 		
-		System.out.print("Informe o tipo do array (1 = Asc, 2 = Desc, 3 = Random): ");
+		System.out.println("1 = (Melhor caso) Array Ascendente");
+		System.out.println("2 = (Pior caso) Array Descendente");
+		System.out.println("3 = (Caso Médio) Array Randômico");
+		System.out.print("Informe o tipo de caso: ");
+		
 		option = in.nextLine();
 		
 		switch (option) {
@@ -58,7 +62,7 @@ public class ArrayHelper {
 	}
 	
 	public int getArraySize() {
-		System.out.print("Informe o tamanho do array: ");
+		System.out.print("Informe o tamanho do array para ordenação: ");
 		
 		return Integer.parseInt(in.nextLine());
 	}
