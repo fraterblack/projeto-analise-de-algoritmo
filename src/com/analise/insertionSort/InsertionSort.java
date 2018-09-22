@@ -11,6 +11,10 @@ public class InsertionSort extends AbstractSort {
 	public int[] sort(int[] array) {
 		int arraySize = array.length;
 		
+		//Reseta controles
+		comparacao = 0;
+		troca = 0;
+		
 		//Start time
 		timer().startTime();
 
@@ -40,8 +44,8 @@ public class InsertionSort extends AbstractSort {
 		GenericExecuteSort<InsertionSort> insertionSort = new GenericExecuteSort<InsertionSort>(InsertionSort.class);
 		insertionSort.execute();
 		
-		System.out.println(InsertionSort.comparacao);
-		System.out.println(InsertionSort.troca);
+		System.out.println("Comparações: " + InsertionSort.comparacao);
+		System.out.println("Trocas: " + InsertionSort.troca);
 	}
 
 }
